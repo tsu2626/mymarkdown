@@ -11,6 +11,15 @@
       return {
         msg:"Welcome To MyMarkdown"
       };
+    },
+    methods: {
+      googleLogin: function() {
+        firebase
+          .auth()
+          .signInWithRedirect(
+            new firebase.auth.GoogleAuthProvider()
+          );
+      }
     }
   }
 </script>

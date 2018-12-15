@@ -74,15 +74,17 @@
       displayTitle: function(text) {
         return text.split(/\n/)[0];
       },
-      mounted: function() {
-        document.onkeydown = e => {
-          this.saveMemos();
-          return false;
-        }
-      },
-      beforeDestroy: function() {
-        document.onkeydown = null;
-      },
+      // mounted: function() {
+      //   document.onkeydown = e => {
+      //     if (e.key == 's' && e.metaKey) {
+      //       this.saveMemos();
+      //       return false;
+      //     }
+      //   }
+      // },
+      // beforeDestroy: function() {
+      //   document.onkeydown = null;
+      // },
     },
   };
 </script>
